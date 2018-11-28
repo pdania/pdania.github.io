@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log in</title>
+    <link rel="stylesheet" href="landing.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <script src="clients.js"></script>
+</head>
+<body>
+<header>
+    <h1>Authorization</h1>
+    <h4>Log in the form below</h4>
+</header>
+<form action="http://localhost:63342/DatingSiteProject/index.html" id="authorizationForm">
+    <fieldset>
+        <legend>Authorization</legend>
+        <label>Email: </label>
+        <input id="email" type="text"required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"><br>
+        <label>Password: </label>
+        <input id="password" type="password"><br>
+        <div onclick="logIn()" style="text-align: center; margin-top: 5px"> <input type="submit" style="color: yellow; background-color: black" value="Log in"></div>
+    </fieldset>
+</form>
+</body>
+</html>

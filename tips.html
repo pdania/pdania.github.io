@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dating tips</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<header class="firstBlock">
+    <div class="slideShowContainer">
+        <div class="mySlides fade">
+            <img src="images/1.jpeg" class="slideShowImage">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/2.jpeg" class="slideShowImage">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/3.jpeg" class="slideShowImage">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/4.jpeg" class="slideShowImage">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/5.jpeg" class="slideShowImage">
+        </div>
+        <div id="dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+    <nav id="navigation">
+        <ul>
+            <li><a href="index.html" id="newsMenuBar">Home</a></li>
+            <li><a href="#" id="datingMenuBar">Dating</a>
+                <ul>
+                    <li><a href="tips.html">Dating tips</a></li>
+                    <li><a href="meeting.html">Meeting</a></li>
+                </ul>
+            </li>
+            <li><a href="#" id="aboutMenuBar">About</a>
+                <ul>
+                    <li><a href="contact.html">Contacts</a></li>
+                    <li><a href="address.html">Address</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="authorizationRegistration">
+        <h2><a href="LogIn.html">Log in</a></h2>
+        <h2><a href="SignIn.html">Sign in</a></h2>
+        <h2><a href="#">Account</a></h2>
+    </div>
+</header>
+<div id="breadCrumbsAndSearch">
+    <a href="#">Tips</a>
+    <div id="search">
+        <input id="searchInput" type="text" placeholder="Search">
+        <input onclick="javascript: FindOnPage('searchInput',true); return false;" type="button" id="searchButton">
+        <input onclick="javascript: FindOnPage('searchInput',false); return false;" type="button" id="searchButton2">
+    </div>
+</div>
+<div class="tips" id="generalTipsForMen">
+    <h1 id="header-mainTipsForMen" style="text-align: center">General tips for men</h1>
+    <a href="#header-mainTipsForWomen" class="aTips"
+       style="text-align: left; text-decoration: none; background: #1e5799; color: yellow">Go to next page</a>
+    <ol>
+        <li><h3>Take initiative.</h3>
+            <p>“When you’re talking or texting while planning the date, as the guy always have a time and place in mind.
+                You never want to get into one of those exchanges like… ‘What do you want to do? Oh I don’t know, what
+                do you want to do?’ Be confident and make a recommendation.” – Radio Wright, Online Dating Expert</p>
+        </li>
+        <li><h3>Be personable. </h3>
+            <p>“Don’t email or text to ask a woman out for the first time. The latter are impersonal, and dating is all
+                about getting to know someone personally. It also sets a poor tone for the relationship’s communication
+                dynamics.” – Erika Martinez, Psy.D. Licensed Psychologist</p>
+        </li>
+        <li><h3>Don’t move too fast.</h3>
+            <p>“For most women, online dating involves a certain level of risk and anxiety so spend time getting to know
+                her online and through phone and video chats before suggesting meeting in person to ensure she feels
+                comfortable.” – Dr. Wyatt Fisher, Clinical Psychologist</p>
+        </li>
+        <li><h3>Go somewhere you’re comfortable.</h3>
+            <p>You might think that you’re being a gentleman by letting your date decide where you go on your date, but
+                women like to see that you can take control. Help cut through any nerves by arranging to meet up in
+                familiar territory that will help you feel more comfortable.” – Nicolas Aujula, Relationship Coach and
+                Therapist</p></li>
+        <li>
+            <h3>Look your best.</h3>
+            <p>“A lot of guys don’t think about how they look before going on dates, even though women pay attention to
+                the little details related to appearance. Make sure you are well-groomed (check for dirty fingernails,
+                freshly apply deodorant, shower). Second, make sure your clothes match, aren’t wrinkled, and look decent
+                on you.” –David Bennett, Dating Coach at The Popular Man</p>
+        </li>
+    </ol>
+</div>
+<div class="tips" id="generalTipsForWomen">
+    <h1 id="header-mainTipsForWomen" style="text-align: center"> General tips for women</h1>
+    <a href="#generalTipsForMen" class="aTips" style="text-align: left; text-decoration: none; background: #1e5799; color: yellow">Go
+        to previous page</a>
+    <ol>
+        <li><p>Do what feels right for you.</p></li>
+        <li><p>Don’t be so quick to judge, there are a lot of choices out there especially with a dating site. And if
+            you judge someone negatively after the first lull in a conversation, you may just be passing up Mr.
+            Right.</p></li>
+        <li><p>Any pictures you post, especially your main photo, shouldn’t hide your face or body. Be proud of you.
+            Show yourself. Post pictures of you!</p></li>
+        <li><p>If you’re viewing someone several times a day/week, don’t be afraid to say something. You might lose out
+            by remaining silent, because we’re not sure if you’re really interested, or just passing by.</p></li>
+        <li><p>Don’t rush things, of course. Though we’re all looking for a special someone, it’s more fun when you
+            don’t try looking but rather stumble right onto it. I know it’s ironic that I’m saying this about a dating
+            site, but I’m really just looking for a good conversation before anything else.</p></li>
+        <li><p>“If all a guy can start off with is hi, don’t blow him off because he’s not blowing your mind with the
+            most amazing greeting you’ve ever read. Give him a little patience and a moment to open up. You could be
+            ignoring someone that just needs a moment to get the pleasantries out of the way.”</p></li>
+        <li><p>“Many of the things you look for in a relationship, a man is looking for as well. Things that you like,
+            men like: compliments, engaging conversation, eye-contact, all of it.”</p></li>
+        <li><p>“Spend some time trying to get to know someone by asking questions about him. In our culture a lot of
+            people make quick judgements and move on without truly getting to know someone.”</p></li>
+        <li><p>“Don’t put in your profile that you want ‘to be treated like a princess,’ that you are ‘high maintenance
+            but worth it,’ or that you ‘want to be spoiled.’ It can come across as selfish instead of confident.”</p>
+    </ol>
+</div>
+<script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 4000); // Change image every 2 seconds
+    }
+</script>
+</body>
+</html>

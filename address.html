@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="clients.js"></script>
+</head>
+<body>
+<header class="firstBlock">
+    <div class="slideShowContainer">
+        <div class="mySlides fade">
+            <img src="images/1.jpeg" class="slideShowImage">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/2.jpeg" class="slideShowImage">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/3.jpeg" class="slideShowImage">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/4.jpeg" class="slideShowImage">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/5.jpeg" class="slideShowImage">
+        </div>
+        <div id="dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+    <nav id="navigation">
+        <ul>
+            <li><a href="index.html" id="newsMenuBar">Home</a></li>
+            <li><a href="#" id="datingMenuBar">Dating</a>
+                <ul>
+                    <li><a href="tips.html">Dating tips</a></li>
+                    <li><a href="meeting.html">Meeting</a></li>
+                </ul>
+            </li>
+            <li><a href="#" id="aboutMenuBar">About</a>
+                <ul>
+                    <li><a href="contact.html">Contacts</a></li>
+                    <li><a href="address.html">Address</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="authorizationRegistration">
+        <h2><a href="LogIn.html">Log in</a></h2>
+        <h2><a href="SignIn.html">Sign in</a></h2>
+        <h2><a href="#">Account</a></h2>
+    </div>
+</header>
+<div id="breadCrumbsAndSearch">
+    <a href="#">Address</a>
+    <div id="search">
+        <input id="searchInput" type="text" placeholder="Search">
+        <input onclick="javascript: FindOnPage('searchInput',true); return false;" type="button" id="searchButton">
+        <input onclick="javascript: FindOnPage('searchInput',false); return false;" type="button" id="searchButton2">
+    </div>
+</div>
+<h1 style="text-align: center">Address</h1>
+<br>
+<div>
+    <h3>City: </h3>
+    <p><b>Brovary city of Gods</b></p>
+    <h3>Tel: </h3>
+    <p><b>8800555535</b></p>
+</div>
+<div style="margin: auto">
+    <iframe width="600" height="450" frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed/v1/place?q=%D0%91%D1%80%D0%BE%D0%B2%D0%B0%D1%80%D0%B8&key=AIzaSyDwaFomsN8hOWmPwpqzHE6-Xg4mbqRgZ5I"
+            allowfullscreen></iframe>
+</div>
+<script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 4000); // Change image every 2 seconds
+    }
+</script>
+
+</body>
+</html>

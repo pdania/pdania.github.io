@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meeting</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="clients.js"></script>
+</head>
+<body>
+<header class="firstBlock">
+    <div class="slideShowContainer">
+        <div class="mySlides fade">
+            <img src="images/1.jpeg" class="slideShowImage">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/2.jpeg" class="slideShowImage">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/3.jpeg" class="slideShowImage">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/4.jpeg" class="slideShowImage">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/5.jpeg" class="slideShowImage">
+        </div>
+        <div id="dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+    <nav id="navigation">
+        <ul>
+            <li><a href="index.html" id="newsMenuBar">Home</a></li>
+            <li><a href="#" id="datingMenuBar">Dating</a>
+                <ul>
+                    <li><a href="tips.html">Dating tips</a></li>
+                    <li><a href="#">Meeting</a></li>
+                </ul>
+            </li>
+            <li><a href="#" id="aboutMenuBar">About</a>
+                <ul>
+                    <li><a href="contact.html">Contacts</a></li>
+                    <li><a href="address.html">Address</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="authorizationRegistration">
+        <h2><a href="LogIn.html">Log in</a></h2>
+        <h2><a href="SignIn.html">Sign in</a></h2>
+        <h2><a href="#" id="account">Account</a></h2>
+    </div>
+</header>
+<div id="breadCrumbsAndSearch">
+    <a href="#">Meeting</a>
+    <div id="search">
+        <input id="searchInput" type="text" placeholder="Search">
+        <input onclick="javascript: FindOnPage('searchInput',true); return false;" type="button" id="searchButton">
+        <input onclick="javascript: FindOnPage('searchInput',false); return false;" type="button" id="searchButton2">
+    </div>
+</div>
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="background-color: #111">&times;</a>
+    <a class="accordion">Name</a>
+    <div class="panel" style="display: none">
+        <a style="font-size: 16px; padding-left: 30px" onclick="sortTableByNameFromAtoZ()">search ascending (name)</a>
+        <a style="font-size: 16px; padding-left: 30px" onclick="sortTableByNameFromZtoA()">search descending (name)</a>
+    </div>
+
+    <a class="accordion">City</a>
+    <div class="panel" style="display: none">
+        <a style="font-size: 16px; padding-left: 30px" onclick="sortTableByCityFromAtoZ()">search ascending (city)</a>
+        <a style="font-size: 16px; padding-left: 30px" onclick="sortTableByCityFromZtoA()">search descending (city)</a>
+    </div>
+
+    <a class="accordion">Age</a>
+    <div class="panel" style="display: none">
+        <a style="font-size: 16px; padding-left: 30px" onclick="sortTableByAgeFromAtoZ()">search ascending (age)</a>
+        <a style="font-size: 16px; padding-left: 30px" onclick="sortTableByAgeFromZtoA()">search descending (age)</a>
+    </div>
+
+    <a class="accordion">Gender</a>
+    <div class="panel" style="display: none;">
+        <a style="font-size: 16px; padding-left: 30px" onclick="manFilter()">Only men</a>
+        <a style="font-size: 16px; padding-left: 30px" onclick="womanFilter()">Only women</a>
+        <a style="font-size: 16px; padding-left: 30px" onclick="bothFilter()">Both</a>
+    </div>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Sort</span>
+<main id="mainTable">
+    <h2 id="tableHeader">My Customers</h2>
+    <input type="text" id="myInput" onkeyup="alphabetSearch()" placeholder="Search for names.." title="Type in a name">
+    <table id="myTable">
+        <tr class="header">
+            <th style="width:40%;">Name</th>
+            <th style="width:20%;">City</th>
+            <th style="width:12%;">Age</th>
+            <th style="width:20%;">Gender</th>
+            <th style="width:8%;">Meet</th>
+        </tr>
+        <tr>
+            <td>Bill Vazovsky</td>
+            <td>Kyiv</td>
+            <td>18</td>
+            <td>Man</td>
+            <td><button>Meet</button></td>
+        </tr>
+        <tr>
+            <td>Mary Clingane</td>
+            <td>Lviv</td>
+            <td>30</td>
+            <td>Woman</td>
+            <td><button>Meet</button></td>
+        </tr>
+        <tr>
+            <td>Chack Rittle</td>
+            <td>Kyiv</td>
+            <td>23</td>
+            <td>Man</td>
+            <td><button>Meet</button></td>
+        </tr>
+        <tr>
+            <td>Daniella Queue</td>
+            <td>Donetsk</td>
+            <td>18</td>
+            <td>Woman</td>
+            <td><button>Meet</button></td>
+        </tr>
+    </table>
+</main>
+<script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 4000); // Change image every 2 seconds
+    }
+</script>
+<script>
+    function alphabetSearch() {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,367 @@
+.firstBlock {
+    width: 100%;
+    height: 160px;
+    background-color: #d9534f;
+    text-align: center;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0; /* required */
+}
+
+h1 {
+    color: #61c419;
+}
+.tips{
+    width: 100%;
+}
+
+/* Slideshow container */
+.slideShowContainer {
+    width: 20%;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+h2 {
+    font-size: 2vw;
+}
+
+#navigation {
+    width: 40%;
+    height: 160px;
+    display: inline-block;
+    vertical-align: top;
+}
+#breadCrumbsAndSearch{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    background-color: rgba(255,161,57,0.55);
+}
+#breadCrumbsAndSearch a{
+    text-decoration: none;
+    color: #61c419;
+    text-align: left;
+    margin: 5px 0 0 3%;
+    display: inline-block;
+}
+#breadCrumbsAndSearch #search{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0 0 0 auto;
+}
+#breadCrumbsAndSearch #search #searchInput{
+    height: 16px;
+}
+#searchButton{
+    background: brown url("images/search.png");
+    background-size: cover;
+    height:22px;
+    width: 27px;
+    margin-left: 2%;
+}
+#searchButton2{
+    background: blue url("images/search2.png");
+    background-size: cover;
+    height:22px;
+    width: 27px;
+    margin-left: 2%;
+}
+#searchButton:hover{
+    box-shadow: 5px 5px 10px -5px black;
+    transition: all 0.4s ease;
+}
+#navigation ul,
+#navigation ol {
+    list-style: none;
+}
+
+#navigation > ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 63px;
+    width: 100%;
+}
+
+#navigation > ul li {
+    text-align: center;
+    padding: 0 6% 0 6%;
+    border-right: 1px solid #5cb85c;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cb60b3+0,ad1283+50,de47ac+100;Pink+3D */
+    background: rgb(203,96,179); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(203,96,179,1) 0%, rgba(173,18,131,1) 50%, rgba(222,71,172,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(203,96,179,1) 0%,rgba(173,18,131,1) 50%,rgba(222,71,172,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(203,96,179,1) 0%,rgba(173,18,131,1) 50%,rgba(222,71,172,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cb60b3', endColorstr='#de47ac',GradientType=0 ); /* IE6-9 */
+}
+
+#navigation > ul li a {
+    display: block;
+    text-decoration: none;
+    font-size: 2vw;
+    text-transform: uppercase;
+    color: chartreuse;
+}
+
+#navigation > ul li:first-child {
+    border-left: 2px solid #5cb85c;
+}
+.aTips:hover{
+    color: #61c419;
+    text-decoration: #61c419;
+}
+#navigation > ul li:last-child {
+    border-right: 2px solid #5cb85c;
+}
+
+#navigation li:hover {
+    box-shadow: 1px 5px 10px -5px black;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b4e391+0,61c419+50,b4e391+100;Green+3D */
+    background: #b4e391; /* Old browsers */
+    background: -moz-linear-gradient(top, #b4e391 0%, #61c419 50%, #b4e391 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #b4e391 0%, #61c419 50%, #b4e391 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #b4e391 0%, #61c419 50%, #b4e391 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b4e391', endColorstr='#b4e391', GradientType=0); /* IE6-9 */
+    transition: all 0.4s ease;
+}
+#navigation li:hover a{
+    color: blue;
+
+}
+
+/*Sub menu*/
+#navigation li ul {
+    position: absolute;
+    min-width: 150px;
+    margin-left: -5.2%;
+    display: none;
+}
+
+#navigation li > ul li {
+    border: 1px solid #5cb85c;
+}
+
+#navigation li > ul li:hover {
+    background: #b4e391; /* Old browsers */
+    background: -moz-linear-gradient(top, #b4e391 0%, #61c419 50%, #b4e391 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #b4e391 0%, #61c419 50%, #b4e391 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #b4e391 0%, #61c419 50%, #b4e391 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b4e391', endColorstr='#b4e391', GradientType=0); /* IE6-9 */
+}
+
+#navigation li > ul li a {
+    padding: 10px;
+    text-transform: none;
+}
+
+#navigation li:hover ul {
+    display: block;
+}
+
+#authorizationRegistration {
+    width: 34%;
+    height: 160px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+}
+
+#authorizationRegistration:before {
+    content: " ";
+    display: inline-block;
+    height: 100%;
+    width: 1%;
+    vertical-align: middle;
+}
+
+#authorizationRegistration h2 {
+    display: inline-block;
+    height: 15%;
+    padding: 3% 3% 5% 3%;
+    vertical-align: middle;
+    border-left: 1px solid #5cb85c;
+}
+
+#authorizationRegistration h2:first-child {
+    border-left: 2px solid #5cb85c;
+}
+
+#authorizationRegistration h2:last-child {
+    border-right: 2px solid #5cb85c;
+}
+
+#authorizationRegistration h2 a {
+    text-decoration: none;
+    color: chartreuse;
+}
+
+#authorizationRegistration h2:hover {
+    box-shadow: 1px 5px 10px -5px black;
+    background: #b4e391; /* Old browsers */
+    background: -moz-linear-gradient(top, #b4e391 0%, #61c419 50%, #b4e391 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #b4e391 0%, #61c419 50%, #b4e391 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #b4e391 0%, #61c419 50%, #b4e391 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b4e391', endColorstr='#b4e391', GradientType=0); /* IE6-9 */
+    color: #428bca;
+    transition: all 0.4s ease;
+}
+#mainSection{
+    width: 100%;
+    height: 450px;
+    margin: auto;
+    border: 1px dashed #61c419;
+    overflow: auto;
+}
+#imagesFigure{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+}
+#mainSection video{
+    width: 50%;
+    height: 200px;
+    display: block;
+    margin: auto;
+}
+.images{
+    padding: 10px;
+
+}
+.fb-share-button{
+    top: 100%;
+    margin-left: 0;
+}
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+.slideShowImage {
+    width: 100%;
+    height: 135px;
+}
+
+#dots {
+    text-align: center;
+    margin: auto;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 0.5%;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active{
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    overflow: auto;
+}
+.sidenav a {
+    padding: 8px 8px 8px 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: lime;
+    display: block;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.sidenav a:hover {
+    color: #ead61c;
+    background-color:#a47c48;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+#mainTable{
+    width: 82%;
+    margin: 0 0 0 auto;
+}
+#tableHeader{
+    text-align: center;
+}
+#myInput {
+    background-image: url('images/search.png');
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+#myTable {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+}
+
+#myTable th, #myTable td {
+    text-align: left;
+    padding: 12px;
+}
+
+#myTable tr {
+    border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+    background-color: #f1f1f1;
+}
+#myTable tr td button{
+    background-color: #111111;
+    color: yellow;
+    cursor: pointer;
+}

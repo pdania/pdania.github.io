@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="landing.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+</head>
+<body>
+<header>
+    <h1>Registration</h1>
+    <h4>Please fill the form below</h4>
+</header>
+<form action="#" id="registrationForm">
+    <fieldset>
+        <legend>Registration</legend>
+        <p><i>Обов&#39;язкові поля помічені </i><em>*</em></p>
+        <label>Name <em>*</em>: </label>
+        <input type="text" required pattern="[A-Za-zА-Яа-я]{1,32}"><br>
+        <label>Surname <em>*</em>: </label>
+        <input type="text" required pattern="[A-Za-zА-Яа-я]{1,32}"><br>
+        <label>Age <em>*</em>: </label>
+        <input type="number" required><br>
+        <label>Gender <em>*</em>: </label>
+        <p><input type="radio" value="Man" name="Gender">Man</p>
+        <p><input type="radio" value="Woman" name="Gender">Woman</p><br>
+        <label>City <em>*</em>: </label>
+        <input type="text" required pattern="[A-Za-zА-Яа-я]{1,32}"><br>
+        <label >Email <em>*</em>: </label>
+        <input type="text" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"><br>
+        <label>Password <em>*</em>: </label>
+        <input type="password" required><br>
+        <label>Repeat password <em>*</em>: </label>
+        <input type="password" required><br>
+        <div style="text-align: center; margin-top: 5px"><input type="submit" style="color: yellow; background-color: black" value="Sign in"></div>
+    </fieldset>
+</form>
+</body>
+</html>

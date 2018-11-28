@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="clients.js"></script>
+</head>
+<body>
+<header class="firstBlock">
+    <div class="slideShowContainer">
+        <div class="mySlides fade">
+            <img src="images/1.jpeg" class="slideShowImage">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/2.jpeg" class="slideShowImage">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/3.jpeg" class="slideShowImage">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/4.jpeg" class="slideShowImage">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/5.jpeg" class="slideShowImage">
+        </div>
+        <div id="dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+    <nav id="navigation">
+        <ul>
+            <li><a href="index.html" id="newsMenuBar">Home</a></li>
+            <li><a href="#" id="datingMenuBar">Dating</a>
+                <ul>
+                    <li><a href="tips.html">Dating tips</a></li>
+                    <li><a href="meeting.html">Meeting</a></li>
+                </ul>
+            </li>
+            <li><a href="#" id="aboutMenuBar">About</a>
+                <ul>
+                    <li><a href="contact.html">Contacts</a></li>
+                    <li><a href="address.html">Address</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="authorizationRegistration">
+        <h2><a href="LogIn.html">Log in</a></h2>
+        <h2><a href="SignIn.html">Sign in</a></h2>
+        <h2><a href="#">Account</a></h2>
+    </div>
+</header>
+<div id="breadCrumbsAndSearch">
+    <a href="#">Contact</a>
+    <div id="search">
+        <input id="searchInput" type="text" placeholder="Search">
+        <input onclick="javascript: FindOnPage('searchInput',true); return false;" type="button" id="searchButton">
+        <input onclick="javascript: FindOnPage('searchInput',false); return false;" type="button" id="searchButton2">
+    </div>
+</div>
+<h1 style="text-align: center">About us</h1>
+<div>
+    <p style="text-align: center">We are enthusiastic full motivated persons with a lot of knowledge</p>
+</div>
+<br>
+<div>
+    <details>
+        <summary>&copy;Copyright 2018.</summary>
+        <p>This site made by <b>Danylo Parkhomenko</b>. All Rights Reserved</p>
+        <p>Site made with usage of HTML, CSS, JavaScript</p>
+    </details>
+    <a href="mailto:pdania@ukr.net">Напишіть нам!</a>
+</div>
+<div>
+    <div class="fb-share-button"
+         data-href="https://soulmates.theguardian.com/blog/advice/top-dating-tips-for-men-by-a-woman#.W_LVguj7TIU"
+         data-layout="button_count" data-size="small" data-mobile-iframe="true"><a target="_blank"
+                                                                                   href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsoulmates.theguardian.com%2Fblog%2Fadvice%2Ftop-dating-tips-for-men-by-a-woman%23.W_LVguj7TIU&amp;src=sdkpreparse"
+                                                                                   class="fb-xfbml-parse-ignore">Поширити</a>
+    </div>
+</div>
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = 'https://connect.facebook.net/uk_UA/sdk.js#xfbml=1&version=v3.2';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 4000); // Change image every 2 seconds
+    }
+</script>
+
+</body>
+</html>
